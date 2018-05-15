@@ -102,7 +102,7 @@ grep --color -oR -i "exec(r.read())" *
 grep --color -oR -i "exec(" *
 grep --color -oR -i ":(){:|:&};:" *
 grep --color -oR -i "/dev/sda" *
-grep --color -oR -i "-O- | sh" *
+grep --color -e "-O- | sh" *
 grep --color -oR -i "dd if=/dev/random of=/dev/sda" *
 
 
@@ -122,14 +122,17 @@ echo " "
 
 echo -e "\e[00;31mHIDDEN FILES\e[00m"
 echo " "
+echo -e "\e[00;33m"
 ls -ld .?*
+echo -e "\e[00m"
 ls -d */ | cut -f1 -d '/' > cart.txt
 
 for line in `cat cart.txt`; do
 
 cd $line
-
+echo -e "\e[00;33m"
 ls -ld .?*
+echo -e "\e[00m"
 cd - > /dev/null
 
 done
