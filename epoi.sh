@@ -102,7 +102,7 @@ grep --color -oR -i "exec(r.read())" *
 grep --color -oR -i "exec(" *
 grep --color -oR -i ":(){:|:&};:" *
 grep --color -oR -i "/dev/sda" *
-grep --color -e "-O- | sh" *
+grep --color -R -e "-O- | sh" *
 grep --color -oR -i "dd if=/dev/random of=/dev/sda" *
 
 
