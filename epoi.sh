@@ -22,7 +22,7 @@ bar
 #cat swan.txt
 echo -e "\e[00m "
 
-echo -e "Extract informations and words considerated \e[00;31mmalicious\e[00m in open source resources\e[00m"
+echo -e "Extract informations and actions considerated \e[00;31mmalicious\e[00m in open source resources\e[00m"
 echo " "
 echo -e "\e[01;36m-------------\e[00m"
 echo "INSERT TARGET DIRECTORY"
