@@ -42,7 +42,7 @@ echo -e "\e[00;34memails\e[00m"
 echo " "
 #grep --color -oR -i '[[:alnum:]+\.\_\-]*@[[:alnum:]+\.\_\-]*' * | sort | uniq -i
 #grep --color -Eio "[a-zA-Z0-9]+@[a-z0-9]+.[a-z]+"
-grep --color -Eio "[a-zA-Z0-9]+@[a-z0-9]+.[a-z]+" *
+grep --color -Eio -R "[a-zA-Z0-9]+@[a-z0-9]+.[a-z]+" *
 
 echo " "
 echo -e "\e[00;34mLinks\e[00m"
@@ -51,10 +51,10 @@ echo " "
 sleep 0.2
 
 #grep -o '[a-zA-Z0-9./:-]\{1,30\}\.*/[[:alnum:]+\.\_\/\?\&\=\-]*' $filer | sort | uniq -i
-grep --color -Eio "http://[a-z0-9]+.[a-z]+" *
-grep --color -Eio "https://[a-z0-9]+.[a-z]+" *
+grep --color -Eio -R "http://[a-z0-9]+.[a-z]+" *
+grep --color -Eio -R "https://[a-z0-9]+.[a-z]+" *
 sleep 0.2
-grep --color -Eio "www.[a-z0-9]+.[a-z]+" *
+grep --color -Eio -R "www.[a-z0-9]+.[a-z]+" *
 echo " "
 
 
@@ -72,11 +72,11 @@ echo " "
 
 #grep --color -oR -i '[a-zA-Z0-9./:-]\{1,20\}\.net*/[[:alnum:]+\.\_\/\?\&\=\-]*\.js' * | sort | uniq -i
 
-grep --color -Eio "http://[a-z0-9]+.[a-z]+/[a-z0-9]+.js" *
-grep --color -Eio "https://[a-z0-9]+.[a-z]+/[a-z0-9]+.js" *
-grep --color -Eio "www.[a-z0-9]+.[a-z]+/[a-z0-9]+.js" *
-grep --color -Eio "[a-z0-9]+.[a-z]+/[a-z0-9]+.js" *
-
+grep --color -Eio -R "http://[a-z0-9]+.[a-z]+/[a-z0-9]+.js" *
+grep --color -Eio -R "https://[a-z0-9]+.[a-z]+/[a-z0-9]+.js" *
+grep --color -Eio -R "www.[a-z0-9]+.[a-z]+/[a-z0-9]+.js" *
+grep --color -Eio -R "[a-z0-9]+.[a-z]+/[a-z0-9]+.js" *
+grep --color -Eio -R "[a-z0-9]+.[a-z]+/[a-z0-9]+/.+.js" *
 
 echo -e "\e[00;34mBase64 encoding\e[00m"
 grep --color -oR -i base64 *
